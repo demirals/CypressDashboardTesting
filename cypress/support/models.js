@@ -23,7 +23,7 @@ privacyPageVerification(){
 
 modelScomparePage(){
 
-    cy.contains('Compare').click()
+    cy.contains('Compare').click({force: true})
     cy.wait(1000)
     cy.url().should('eq', comparePageUrl)
     cy.scrollTo('bottomLeft')
