@@ -5,9 +5,9 @@ var comparePage = require('../fixtures/comparePage.json')
 export class modelS{
 
 urlVerification(){
-    cy.wait(500)
+    cy.wait(800)
     //cy.get('.tds-align--center > :nth-child(1) > .tds-site-nav-item > .tds-site-nav-item-text').click()
-    cy.contains('Model S').click()
+    cy.contains('Model S').click({force: true})
     cy.url().should('eq', modelSURL)
     cy.contains('Model S').should('be.visible')      
   }
