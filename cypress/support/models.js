@@ -1,27 +1,28 @@
 
-import { modelSURL } from "./authentication.constant";
+import { modelSURL } from "./authentication.constant"
 var data = require('../fixtures/modelsPage.json')
+var comparePage = require('../fixtures/comparePage.json')
+export class modelS{
 
-export class ModelS{
+urlVerification(){
+    cy.wait(500)
+    cy.contains('Model S').click()
+    cy.url().should('eq', modelSURL)
+    cy.contains('Model S').should('be.visible')      
+  }
 
-    urlVerification(){
+privacyPageVerification(){
 
-        cy.contains('Model S').click()
-        cy.url().should('eq', modelSURL)
-    }
+    cy.scrollTo('bottomLeft')
+    cy.get('[class="tds-link tcl-link"]').each(($el,index)=>{
 
-    privacy_Verification(){
-        cy.scrollTo('bottomLeft')
-
-        cy.get('[class="tds-link tcl-link"]').each(($el,index)=>{
-
-            const text = $el.text()
-            expect(text).to.contain(data.ModelS[index])
-        })
+        const text = $el.text()
+        expect(text).to.contain(data.ModelS[index])
 
 
-    }
+    })
+}
 
 }
 
-export const onModelSPage = new ModelS;
+export const onModelSPage = new modelS
