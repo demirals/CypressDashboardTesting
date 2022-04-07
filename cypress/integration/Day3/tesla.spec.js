@@ -15,8 +15,10 @@ describe('tesla.com automation testing',()=>{
 
         onModelSPage.urlVerification()
         onModelSPage.privacyPageVerification()
-
+        onModelSPage.modelScomparePage()
     })
-
-
 })
+
+//navigate to page https://www.tesla.com/models
+//click compare
+//check every single text on the page
