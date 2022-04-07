@@ -7,7 +7,7 @@ export class modelS{
 urlVerification(){
     cy.wait(800)
     //cy.get('.tds-align--center > :nth-child(1) > .tds-site-nav-item > .tds-site-nav-item-text').click()
-    cy.contains('Model S').click({force: true})
+    cy.contains('Model S').click({force: true})  //force:tru ya dikkat
     cy.url().should('eq', modelSURL)
     cy.contains('Model S').should('be.visible')      
   }

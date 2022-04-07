@@ -12,3 +12,6 @@ export const modelSURL = "https://www.tesla.com/models"
 export const model3URL= "https://www.tesla.com/model3"
 
 export const comparePageUrl = "https://www.tesla.com/compare"
+
+export const githubUrl = "https://github.com/"
+export const githubLoginUrl = "https://github.com/login"
