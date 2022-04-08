@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "TeslaModelS":"npx cypress run --record --key 1b1a093e-b974-4c48-afa4-e6aa07550bf2 --spec 'cypress/integration/Day3/tesla.spec.js'"
+    "TeslaModelS": "npx cypress run --record --key 1b1a093e-b974-4c48-afa4-e6aa07550bf2 --spec 'cypress/integration/Day3/tesla.spec.js'",
+    "githubPage": "npx cypress run --record --key 1b1a093e-b974-4c48-afa4-e6aa07550bf2 --spec 'cypress/integration/Day4/github.spec.js'"
   },
   "author": "dmrals",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^9.5.3",
-    "cypress-file-upload": "^5.0.8"
+    "cypress-file-upload": "^5.0.8",
+    "cypress-sql-server": "^1.0.0"
   }
 }

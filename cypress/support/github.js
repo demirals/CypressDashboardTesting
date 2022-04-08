@@ -9,9 +9,9 @@ verifySignInUrl(){
 }
 
 
-
-
-
+navigatetoMainPage(){
+    cy.go('back')
+}
 
 
 }
