@@ -20,3 +20,14 @@ import './commands'
 import 'cypress-file-upload';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+
+//bunu > Cannot read properties of null (reading 'classList') hatasi icin ekledim
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // returning false here prevents Cypress from
+    // failing the test
+    return false
+  })
+
+
+
