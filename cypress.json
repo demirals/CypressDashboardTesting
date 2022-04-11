@@ -1,6 +1,6 @@
 {
     "baseUrl": "https://www.facebook.com/",
-    "defaultCommandTimeout": 6000,
+    "defaultCommandTimeout": 1000,
     "pageLoadTimeout": 8000,
     "viewportHeight": 1028,
     "viewportWidth": 1920,
@@ -16,9 +16,9 @@
 
       "db": {
         "host": "127.0.0.1",
-        "user": "admin",
-      "password": "password",
-      "database": "db_name"       
+        "user": "root",
+      "password": "demirals1234",
+      "database": "mysql"       
         
                                   }
     },

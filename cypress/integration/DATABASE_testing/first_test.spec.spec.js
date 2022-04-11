@@ -12,6 +12,7 @@ describe('Example to Demonstrate SQL Database Testing in Cypress', () => {
         (003, "Dwight", "House No. 03", "Lapland"),
         (004, "Michael", "House No. 04", "Vantaa");`).then((result) => {
                 expect(result.affectedRows).to.equal(4)
+                console.log(result);
             })
     })
 
@@ -23,6 +24,19 @@ describe('Example to Demonstrate SQL Database Testing in Cypress', () => {
             expect(result[0].FirstName).to.equal('Kevin')
         })
     })
+
+
+    it('Read from DB',function (error, results, fields) {
+        cy.task('queryDb', `SELECT * FROM Persons`).then((result)=> {
+            console.log('result')
+            // error will be an Error if one occurred during the query
+            // results will contain the results of the query
+            // fields will contain information about the returned results fields (if any)
+          })     
+            
+     
+    })
+        
 
     it('Verify that there is only one row where the city is Espoo', function () {
         cy.task('queryDb', `SELECT COUNT(*) as "rowCount" FROM Persons WHERE City="Espoo"`).then((result) => {
